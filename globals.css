@@ -1,0 +1,76 @@
+/* Custom Color Variables */
+:root {
+  /* Sage Green Palette */
+  --sage-50: #f8faf9;
+  --sage-100: #f1f5f2;
+  --sage-200: #e3ebe5;
+  --sage-300: #c9d6cc;
+  --sage-400: #a8bfad;
+  --sage-500: #87a18c;
+  --sage-600: #6b8670;
+  --sage-700: #576b5b;
+  --sage-800: #47564a;
+  --sage-900: #3c473e;
+
+  /* Warm Gray Palette */
+  --warm-gray-50: #fafaf9;
+  --warm-gray-100: #f5f5f4;
+  --warm-gray-200: #e7e5e4;
+  --warm-gray-300: #d6d3d1;
+  --warm-gray-400: #a8a29e;
+  --warm-gray-500: #78716c;
+  --warm-gray-600: #57534e;
+  --warm-gray-700: #44403c;
+  --warm-gray-800: #292524;
+  --warm-gray-900: #1c1917;
+
+  /* Terracotta Accent Palette */
+  --terracotta-50: #fef7f3;
+  --terracotta-100: #fdeee6;
+  --terracotta-200: #f9d5c1;
+  --terracotta-300: #f4b896;
+  --terracotta-400: #ed8f5f;
+  --terracotta-500: #e67239;
+  --terracotta-600: #d75a21;
+  --terracotta-700: #b4481b;
+  --terracotta-800: #903c1c;
+  --terracotta-900: #74331a;
+}
+
+/* Custom Color Utilities */
+.bg-sage-50 { background-color: var(--sage-50); }
+.bg-sage-100 { background-color: var(--sage-100); }
+.bg-sage-200 { background-color: var(--sage-200); }
+.border-sage-200 { border-color: var(--sage-200); }
+.text-sage-200 { color: var(--sage-200); }
+.text-sage-300 { color: var(--sage-300); }
+.text-sage-600 { color: var(--sage-600); }
+.text-sage-700 { color: var(--sage-700); }
+.hover\:text-sage-200:hover { color: var(--sage-200); }
+.hover\:text-sage-700:hover { color: var(--sage-700); }
+
+.bg-warm-gray-900 { background-color: var(--warm-gray-900); }
+.text-warm-gray-300 { color: var(--warm-gray-300); }
+.text-warm-gray-400 { color: var(--warm-gray-400); }
+.text-warm-gray-700 { color: var(--warm-gray-700); }
+.text-warm-gray-800 { color: var(--warm-gray-800); }
+.border-warm-gray-700 { border-color: var(--warm-gray-700); }
+
+/* Terracotta Accent Colors */
+.bg-terracotta-50 { background-color: var(--terracotta-50); }
+.bg-terracotta-100 { background-color: var(--terracotta-100); }
+.border-terracotta-200 { border-color: var(--terracotta-200); }
+.text-terracotta-600 { color: var(--terracotta-600); }
+.text-terracotta-700 { color: var(--terracotta-700); }
+.hover\:text-terracotta-600:hover { color: var(--terracotta-600); }
+.hover\:border-terracotta-300:hover { border-color: var(--terracotta-300); }
+
+/* Custom gradients */
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--terracotta-50), white);
+}
+
+/* Font Families */
+.font-josefin { 
+  font-family: 'Josefin Sans', sans-serif; 
+}
