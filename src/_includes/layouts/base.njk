@@ -35,6 +35,11 @@
 
   {% include "partials/footer.njk" %}
 
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+    <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+    <img id="lightbox-img" class="lightbox__img" src="" alt="">
+  </div>
+
   <script>
     function toggleMobileMenu() {
       const mobileMenu = document.getElementById('mobile-menu');
@@ -50,6 +55,43 @@
         } catch (e) {}
       });
     });
+
+    (function () {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxClose = document.getElementById('lightbox-close');
+      if (!lightbox || !lightboxImg) return;
+
+      function openLightbox(src, alt) {
+        if (!src) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.hidden = false;
+        lightbox.classList.add('is-open');
+        document.body.classList.add('modal-open');
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.hidden = true;
+        document.body.classList.remove('modal-open');
+        lightboxImg.src = '';
+      }
+
+      document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('[data-lightbox-src]');
+        if (trigger) {
+          e.preventDefault();
+          openLightbox(trigger.dataset.lightboxSrc, trigger.dataset.lightboxAlt);
+        }
+      });
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+      });
+    })();
   </script>
 </body>
 </html>
