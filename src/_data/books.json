@@ -12,7 +12,7 @@
     ],
     "isbn": "978-607-69464-1-1",
     "pages": "214",
-    "year": "2025",
+    "year": "2026",
     "language": "Español",
     "format": "Impreso",
     "price": "$500 MXN",
@@ -20,7 +20,7 @@
   },
   {
     "slug": "arbol-ciliar",
-    "title": "Árbol Ciliar",
+    "title": "árbol ciliar",
     "author": "Florence Anne Malfatto",
     "authorSlug": "florence-malfatto",
     "cover": "/images/placeholder-book.svg",
@@ -30,11 +30,11 @@
       "/images/arbol_ciliar/arbol_ciliar_3.jpg"
     ],
     "isbn": "978-607-69464-2-8",
-    "pages": "Por definir",
-    "year": "2025",
+    "pages": "59",
+    "year": "2026",
     "language": "Español",
-    "format": "Impreso",
+    "format": "Impresión tipográfica",
     "price": "Próximamente",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "description": "que bendita sea<br>loada boca sin cesar<br>que bese boca sin nombre<br>que beban pájaros<br>y que leve sea aire<br>balbuceo de sol<br>de luz<br>de sol"
   }
 ]
