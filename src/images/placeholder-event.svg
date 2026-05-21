@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Cartel del evento pendiente">
+  <rect width="800" height="1000" fill="#fef7f3"/>
+  <rect x="40" y="40" width="720" height="920" fill="none" stroke="#d75a21" stroke-width="3" stroke-dasharray="12 8"/>
+  <g fill="#b4481b" font-family="Georgia, serif" text-anchor="middle">
+    <text x="400" y="480" font-size="48">Cartel</text>
+    <text x="400" y="540" font-size="32">próximamente</text>
+  </g>
+</svg>

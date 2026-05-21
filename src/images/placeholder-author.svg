@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Retrato pendiente">
+  <rect width="400" height="400" fill="#f1f5f2"/>
+  <circle cx="200" cy="160" r="70" fill="#c9d6cc"/>
+  <path d="M70 360 C 90 270 310 270 330 360 L 330 400 L 70 400 Z" fill="#c9d6cc"/>
+  <text x="200" y="380" font-size="18" fill="#576b5b" font-family="Georgia, serif" text-anchor="middle">Foto próximamente</text>
+</svg>

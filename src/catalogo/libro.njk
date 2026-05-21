@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: books
+  size: 1
+  alias: book
+permalink: "/catalogo/{{ book.slug }}/"
+eleventyComputed:
+  title: "{{ book.title }}"
+---
+
+<section class="px-8 py-16 sm:px-20 bg-gradient-to-b from-terracotta-50 to-white">
+  <div class="max-w-5xl mx-auto">
+    <a href="/catalogo/" class="inline-block text-sm text-terracotta-600 hover:text-terracotta-700 mb-8">← Volver al catálogo</a>
+
+    <div class="grid gap-10 md:grid-cols-2 items-start">
+      <div>
+        <div class="aspect-[2/3] bg-terracotta-50 rounded-lg overflow-hidden border border-terracotta-200 shadow-sm">
+          <img src="{{ book.cover }}" alt="Portada de {{ book.title }}" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <div>
+        <h1 class="text-4xl font-bold text-warm-gray-800 mb-2">{{ book.title }}</h1>
+        <p class="text-lg text-terracotta-700 mb-6">
+          de
+          {% if book.authorSlug %}<a href="/autores/{{ book.authorSlug }}/" class="hover:text-terracotta-600 underline-offset-2 hover:underline">{{ book.author }}</a>{% else %}{{ book.author }}{% endif %}
+        </p>
+
+        <p class="text-warm-gray-700 leading-relaxed mb-8">{{ book.description }}</p>
+
+        <dl class="grid grid-cols-2 gap-4 text-sm text-warm-gray-700 mb-8">
+          <div>
+            <dt class="uppercase tracking-wider text-xs text-terracotta-600">ISBN</dt>
+            <dd>{{ book.isbn }}</dd>
+          </div>
+          <div>
+            <dt class="uppercase tracking-wider text-xs text-terracotta-600">Páginas</dt>
+            <dd>{{ book.pages }}</dd>
+          </div>
+          <div>
+            <dt class="uppercase tracking-wider text-xs text-terracotta-600">Año</dt>
+            <dd>{{ book.year }}</dd>
+          </div>
+          <div>
+            <dt class="uppercase tracking-wider text-xs text-terracotta-600">Idioma</dt>
+            <dd>{{ book.language }}</dd>
+          </div>
+          <div>
+            <dt class="uppercase tracking-wider text-xs text-terracotta-600">Formato</dt>
+            <dd>{{ book.format }}</dd>
+          </div>
+          <div>
+            <dt class="uppercase tracking-wider text-xs text-terracotta-600">Precio</dt>
+            <dd>{{ book.price }}</dd>
+          </div>
+        </dl>
+
+        <button type="button" disabled class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md bg-warm-gray-300 text-warm-gray-700 cursor-not-allowed font-medium" title="El enlace de compra aún no está disponible">
+          Próximamente a la venta
+        </button>
+      </div>
+    </div>
+
+    {% if book.gallery and book.gallery.length %}
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-warm-gray-800 mb-6">Fotos</h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {% for img in book.gallery %}
+            <div class="aspect-square bg-terracotta-50 rounded-lg overflow-hidden border border-terracotta-200">
+              <img src="{{ img }}" alt="Foto de {{ book.title }}" class="w-full h-full object-cover">
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+title: Autores
+permalink: /autores/
+---
+
+<section class="px-8 py-16 sm:px-20 bg-gradient-to-b from-terracotta-50 to-white">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-4xl font-bold text-warm-gray-800 text-center mb-4">Autores</h1>
+    <span class="block w-16 h-1 bg-terracotta-600 rounded-full mx-auto mb-12"></span>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {% for author in authors %}
+        <a href="/autores/{{ author.slug }}/" class="group block bg-white rounded-lg overflow-hidden border border-terracotta-200 shadow-sm hover:shadow-md hover:border-terracotta-300 transition-all duration-200">
+          <div class="aspect-square bg-sage-100 overflow-hidden">
+            <img src="{{ author.photo }}" alt="Retrato de {{ author.name }}" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-warm-gray-800 group-hover:text-terracotta-600 transition-colors">{{ author.name }}</h3>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

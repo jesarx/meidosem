@@ -1,0 +1,40 @@
+<footer class="bg-warm-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-8 sm:px-20 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="md:col-span-2">
+        <div class="font-josefin flex items-center space-x-2 mb-4">
+          <span class="text-xl font-light uppercase">meidosem</span>
+          <span class="text-xl font-light uppercase">ediciones</span>
+        </div>
+        <p class="text-warm-gray-300 text-sm leading-relaxed max-w-md">
+          Editorial independiente dedicada a la publicación de obras literarias
+          de calidad, promoviendo nuevas voces y perspectivas en el mundo de las letras.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4 text-terracotta-600">Enlaces</h3>
+        <ul class="space-y-2">
+          <li><a href="/catalogo/" class="text-warm-gray-300 hover:text-terracotta-600 text-sm transition-colors">Catálogo</a></li>
+          <li><a href="/autores/" class="text-warm-gray-300 hover:text-terracotta-600 text-sm transition-colors">Autores</a></li>
+          <li><a href="/manifiesto/" class="text-warm-gray-300 hover:text-terracotta-600 text-sm transition-colors">Manifiesto</a></li>
+          <li><a href="/contacto/" class="text-warm-gray-300 hover:text-terracotta-600 text-sm transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4 text-terracotta-600">Contacto</h3>
+        <ul class="space-y-2 text-sm text-warm-gray-300 mb-4">
+          <li><a href="mailto:{{ site.email }}" class="hover:text-terracotta-600 transition-colors">{{ site.email }}</a></li>
+          <li><a href="{{ site.instagram }}" target="_blank" rel="noopener" class="hover:text-terracotta-600 transition-colors">Instagram {{ site.instagramHandle }}</a></li>
+          <li>Ciudad de México, México</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-warm-gray-700 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+      <p class="text-xs text-warm-gray-400">{{ site.year }} Meidosem Ediciones.</p>
+      <p class="text-xs text-warm-gray-400">{{ site.credit }}</p>
+    </div>
+  </div>
+</footer>
