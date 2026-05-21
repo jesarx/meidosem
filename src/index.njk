@@ -28,30 +28,8 @@ title: Inicio
   <div class="absolute bottom-8 right-8 w-3 h-3 bg-terracotta-600 rounded-full opacity-20"></div>
 </section>
 
-<section class="px-8 py-16 sm:px-20 bg-warm-gray-50">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold mb-12 text-center text-warm-gray-800 relative">
-      Libros publicados
-      <span class="block w-16 h-1 bg-terracotta-600 rounded-full mx-auto mt-3"></span>
-    </h2>
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {% for book in books %}
-        <a href="/catalogo/{{ book.slug }}/" class="group block bg-white rounded-lg overflow-hidden border border-terracotta-200 shadow-sm hover:shadow-md hover:border-terracotta-300 transition-all duration-200">
-          <div class="aspect-[2/3] bg-terracotta-50 overflow-hidden">
-            <img src="{{ book.cover }}" alt="Portada de {{ book.title }}" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300">
-          </div>
-          <div class="p-5">
-            <h3 class="text-xl font-semibold text-warm-gray-800 group-hover:text-terracotta-600 transition-colors">{{ book.title }}</h3>
-            <p class="text-terracotta-700 mt-1">de {{ book.author }}</p>
-          </div>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 {% if events and events.length %}
-<section class="px-8 py-16 sm:px-20 bg-white">
+<section class="px-8 py-16 sm:px-20 bg-warm-gray-50">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold mb-12 text-center text-warm-gray-800 relative">
       Próximos eventos
@@ -78,3 +56,26 @@ title: Inicio
   </div>
 </section>
 {% endif %}
+
+<section class="px-8 py-16 sm:px-20 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center text-warm-gray-800 relative">
+      Libros publicados
+      <span class="block w-16 h-1 bg-terracotta-600 rounded-full mx-auto mt-3"></span>
+    </h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {% for book in books %}
+        <a href="/catalogo/{{ book.slug }}/" class="group block bg-white rounded-lg overflow-hidden border border-terracotta-200 shadow-sm hover:shadow-md hover:border-terracotta-300 transition-all duration-200">
+          <div class="aspect-[2/3] bg-terracotta-50 overflow-hidden">
+            <img src="{{ book.cover }}" alt="Portada de {{ book.title }}" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-warm-gray-800 group-hover:text-terracotta-600 transition-colors">{{ book.title }}</h3>
+            <p class="text-terracotta-700 mt-1">de {{ book.author }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
