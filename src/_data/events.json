@@ -1,10 +1,18 @@
 [
   {
-    "slug": "evento-ejemplo",
+    "slug": "presentacion-oir-1",
     "title": "Presentación de Oír",
-    "date": "2025-06-2",
-    "thumb": "/images/eventos/presentacion_oir_1.jpg",
-    "poster": "/images/placeholder-event.svg",
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lugar y hora por confirmar."
+    "date": "2026-06-2",
+    "thumb": "/images/eventos/thumb_oir_1.jpg",
+    "poster": "/images/eventos/full_oir_1.jpg",
+    "place": "Facultad de Música, CDMX"
+  },
+  {
+    "slug": "presentacion-oir-2",
+    "title": "Presentación de Oír",
+    "date": "2026-06-12",
+    "thumb": "/images/eventos/thumb_oir_2.jpg",
+    "poster": "/images/eventos/full_oir_2.jpg",
+    "place": "Pátzcuaro, Michoacán"
   }
 ]
