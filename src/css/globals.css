@@ -35,6 +35,20 @@
   --terracotta-700: #b4481b;
   --terracotta-800: #903c1c;
   --terracotta-900: #74331a;
+
+  /* Semantic gradient */
+  --gradient-from: var(--terracotta-50);
+  --gradient-to: #ffffff;
+}
+
+html {
+  background-color: #ffffff;
+  color: var(--warm-gray-800);
+}
+
+html.dark {
+  background-color: var(--warm-gray-900);
+  color: var(--warm-gray-100);
 }
 
 /* Custom Color Utilities */
@@ -49,6 +63,8 @@
 .hover\:text-sage-200:hover { color: var(--sage-200); }
 .hover\:text-sage-700:hover { color: var(--sage-700); }
 
+.bg-warm-gray-50 { background-color: var(--warm-gray-50); }
+.bg-warm-gray-100 { background-color: var(--warm-gray-100); }
 .bg-warm-gray-900 { background-color: var(--warm-gray-900); }
 .text-warm-gray-300 { color: var(--warm-gray-300); }
 .text-warm-gray-400 { color: var(--warm-gray-400); }
@@ -67,10 +83,148 @@
 
 /* Custom gradients */
 .bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, var(--terracotta-50), white);
+  background-image: linear-gradient(to bottom, var(--gradient-from), var(--gradient-to));
 }
 
 /* Font Families */
-.font-josefin { 
-  font-family: 'Josefin Sans', sans-serif; 
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* =========================================================
+ * Dark mode overrides
+ * Approach: redefine the same utility classes when html.dark
+ * is present so existing markup adapts without per-element
+ * dark: variants.
+ * ========================================================= */
+html.dark {
+  --gradient-from: #2a1a13;
+  --gradient-to: var(--warm-gray-900);
+}
+
+.dark body {
+  background-color: var(--warm-gray-900);
+  color: var(--warm-gray-100);
+}
+
+/* Page surfaces */
+.dark .bg-white { background-color: var(--warm-gray-900); }
+.dark .bg-white\/95 { background-color: rgba(28, 25, 23, 0.92); }
+.dark .bg-warm-gray-50 { background-color: #211e1c; }
+.dark .bg-warm-gray-100 { background-color: #26211f; }
+.dark .bg-terracotta-50 { background-color: #2a1a13; }
+.dark .bg-terracotta-100 { background-color: #321f17; }
+.dark .bg-sage-50 { background-color: #1d2520; }
+.dark .bg-sage-100 { background-color: #212a25; }
+.dark .bg-sage-200 { background-color: #28332c; }
+.dark .bg-warm-gray-900 { background-color: #0e0c0b; }
+
+/* Text */
+.dark .text-warm-gray-700 { color: var(--warm-gray-300); }
+.dark .text-warm-gray-800 { color: var(--warm-gray-100); }
+.dark .text-warm-gray-300 { color: var(--warm-gray-300); }
+.dark .text-warm-gray-400 { color: var(--warm-gray-400); }
+.dark .text-sage-600 { color: var(--sage-400); }
+.dark .text-sage-700 { color: var(--sage-300); }
+.dark .text-terracotta-600 { color: var(--terracotta-400); }
+.dark .text-terracotta-700 { color: var(--terracotta-300); }
+
+/* Borders */
+.dark .border-sage-200 { border-color: var(--warm-gray-700); }
+.dark .border-terracotta-200 { border-color: var(--terracotta-800); }
+.dark .border-warm-gray-700 { border-color: #2a2624; }
+
+/* Hover states */
+.dark .hover\:text-terracotta-600:hover { color: var(--terracotta-400); }
+.dark .hover\:border-terracotta-300:hover { border-color: var(--terracotta-600); }
+
+/* Disabled button in dark mode */
+.dark .bg-warm-gray-300 { background-color: var(--warm-gray-700); }
+.dark .text-warm-gray-700 { color: var(--warm-gray-300); }
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  color: var(--warm-gray-700);
+  transition: background-color 0.2s, color 0.2s;
+}
+.theme-toggle:hover {
+  background-color: var(--terracotta-50);
+  color: var(--terracotta-600);
+}
+.dark .theme-toggle {
+  color: var(--warm-gray-300);
+}
+.dark .theme-toggle:hover {
+  background-color: #2a1a13;
+  color: var(--terracotta-400);
+}
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+.dark .theme-toggle .icon-sun { display: block; }
+.dark .theme-toggle .icon-moon { display: none; }
+
+/* Event modal */
+.event-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(28, 25, 23, 0.85);
+  padding: 1.5rem;
+}
+.event-modal.open {
+  display: flex;
+}
+.event-modal__inner {
+  position: relative;
+  max-width: min(90vw, 900px);
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.event-modal__img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.5);
+}
+.event-modal__close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--warm-gray-900);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.event-modal__close:hover {
+  background-color: #ffffff;
+}
+@media (max-width: 640px) {
+  .event-modal__close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+body.modal-open {
+  overflow: hidden;
 }
