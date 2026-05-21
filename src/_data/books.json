@@ -4,36 +4,36 @@
     "title": "Oír",
     "author": "Samuel Cedillo",
     "authorSlug": "samuel-cedillo",
-    "cover": "/images/placeholder-book.svg",
+    "cover": "/images/oir_portada.jpg",
     "gallery": [
       "/images/placeholder-book.svg",
       "/images/placeholder-book.svg",
       "/images/placeholder-book.svg"
     ],
-    "isbn": "Por definir",
-    "pages": "Por definir",
+    "isbn": "978-607-69464-1-1",
+    "pages": "214",
     "year": "2025",
     "language": "Español",
-    "format": "Por definir",
-    "price": "Próximamente",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "format": "Impreso",
+    "price": "$500 MXN",
+    "description": "El presente libro establece las bases para la amplia comprensión del sonido humano desde una filosofía del sonido que nos devela un orden geométrico del oído.  Mediante un análisis sistemático de la relación entre la energía acústica y el cuerpo humano vamos comprendiendo dónde radica la fuente del conocimiento humano fundado en la experiencia de sonido. Considerando la energía acústica como parte de una masa continua en movimiento en la que habita el cuerpo humano, se esboza a su vez la línea evolutiva del oído hacia una constitución de sonido como una experiencia sensible humana. El oído es así afirmado como una modalidad de inteligencia sensible en el cuerpo, desde donde se establece un oído pensante que piensa geométricamente conformando un espacio acústico para sí.  Un oído sumergido en un río acústico, una corriente que no cesa. El río de Heráclito aparece aquí desde su fundamento acústico, el cual se presenta en la irreversible vida sonorizada dentro de la corriente de duración del movimiento metabólico mismo del cuerpo humano. Este libro nos propone una relación de escucha múltiple que se funda con la multiplicación del individuo humano a nivel de especie. Nos es develado así un universo geométrico de escucha simultánea planetaria, continua y múltiple, transindividual."
   },
   {
     "slug": "arbol-ciliar",
     "title": "Árbol Ciliar",
-    "author": "Florence Malfatto",
+    "author": "Florence Anne Malfatto",
     "authorSlug": "florence-malfatto",
     "cover": "/images/placeholder-book.svg",
     "gallery": [
-      "/images/placeholder-book.svg",
-      "/images/placeholder-book.svg",
-      "/images/placeholder-book.svg"
+      "/images/arbol_ciliar/arbol_ciliar_1.jpg",
+      "/images/arbol_ciliar/arbol_ciliar_2.jpg",
+      "/images/arbol_ciliar/arbol_ciliar_3.jpg"
     ],
-    "isbn": "Por definir",
+    "isbn": "978-607-69464-2-8",
     "pages": "Por definir",
     "year": "2025",
     "language": "Español",
-    "format": "Por definir",
+    "format": "Impreso",
     "price": "Próximamente",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   }
