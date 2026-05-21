@@ -6,7 +6,8 @@ title: Inicio
 <section class="font-josefin flex flex-col items-center justify-center min-h-[60vh] p-8 pb-20 gap-8 sm:gap-16 sm:p-20 bg-warm-gray-50">
   <div class="flex gap-4 items-center justify-center flex-col sm:flex-row text-center sm:text-left">
     <p class="text-3xl sm:text-4xl lg:text-6xl font-light uppercase text-terracotta-600">meidosem</p>
-    <img src="/images/logo.png" alt="Meidosem Ediciones" class="w-24 h-24 sm:w-32 sm:h-32 lg:w-48 lg:h-48 object-contain p-2">
+    <img src="/images/logo.png" alt="Meidosem Ediciones" class="logo-light w-24 h-24 sm:w-32 sm:h-32 lg:w-48 lg:h-48 object-contain p-2">
+    <img src="/images/logo_blanco.png" alt="Meidosem Ediciones" class="logo-dark w-24 h-24 sm:w-32 sm:h-32 lg:w-48 lg:h-48 object-contain p-2">
     <p class="text-3xl sm:text-4xl lg:text-6xl font-light uppercase text-warm-gray-800">ediciones</p>
   </div>
 </section>
@@ -59,9 +60,9 @@ title: Inicio
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {% for event in events %}
         <button type="button"
-                class="event-toggle group block w-full text-left bg-white rounded-lg overflow-hidden border border-sage-200 shadow-sm hover:shadow-md transition-all duration-200"
-                data-poster="{{ event.poster }}"
-                data-title="{{ event.title }}">
+                class="group block w-full text-left bg-white rounded-lg overflow-hidden border border-sage-200 shadow-sm hover:shadow-md transition-all duration-200"
+                data-lightbox-src="{{ event.poster }}"
+                data-lightbox-alt="Cartel de {{ event.title }}">
           <div class="aspect-[4/3] bg-sage-100 overflow-hidden">
             <img src="{{ event.thumb }}" alt="{{ event.title }}" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300">
           </div>
@@ -75,45 +76,4 @@ title: Inicio
     </div>
   </div>
 </section>
-
-<div id="event-modal" class="event-modal" role="dialog" aria-modal="true" aria-label="Cartel del evento">
-  <div class="event-modal__inner">
-    <button type="button" class="event-modal__close" id="event-modal-close" aria-label="Cerrar">&times;</button>
-    <img id="event-modal-img" class="event-modal__img" src="" alt="">
-  </div>
-</div>
-
-<script>
-  (function () {
-    const modal = document.getElementById('event-modal');
-    const modalImg = document.getElementById('event-modal-img');
-    const modalClose = document.getElementById('event-modal-close');
-    if (!modal || !modalImg) return;
-
-    function openModal(src, title) {
-      modalImg.src = src;
-      modalImg.alt = title ? 'Cartel de ' + title : '';
-      modal.classList.add('open');
-      document.body.classList.add('modal-open');
-    }
-    function closeModal() {
-      modal.classList.remove('open');
-      document.body.classList.remove('modal-open');
-      modalImg.src = '';
-    }
-
-    document.querySelectorAll('.event-toggle').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        openModal(btn.dataset.poster, btn.dataset.title);
-      });
-    });
-    modalClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal();
-    });
-  })();
-</script>
 {% endif %}
