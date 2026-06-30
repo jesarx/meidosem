@@ -56,9 +56,15 @@ eleventyComputed:
           </div>
         </dl>
 
-        <button type="button" disabled class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md bg-warm-gray-300 text-warm-gray-700 cursor-not-allowed font-medium border" title="El enlace de compra aún no está disponible">
-          Próximamente a la venta
-        </button>
+        {% if book.buyLink %}
+          <a href="{{ book.buyLink }}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md bg-terracotta-600 text-white hover:bg-terracotta-700 font-medium border border-terracotta-600 transition-colors">
+            Comprar
+          </a>
+        {% else %}
+          <button type="button" disabled class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-md bg-warm-gray-300 text-warm-gray-700 cursor-not-allowed font-medium border" title="El enlace de compra aún no está disponible">
+            Próximamente a la venta
+          </button>
+        {% endif %}
       </div>
     </div>
 
