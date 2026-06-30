@@ -75,10 +75,14 @@ html.dark {
 /* Terracotta Accent Colors */
 .bg-terracotta-50 { background-color: var(--terracotta-50); }
 .bg-terracotta-100 { background-color: var(--terracotta-100); }
+.bg-terracotta-600 { background-color: var(--terracotta-600); }
+.bg-terracotta-700 { background-color: var(--terracotta-700); }
 .border-terracotta-200 { border-color: var(--terracotta-200); }
+.border-terracotta-600 { border-color: var(--terracotta-600); }
 .text-terracotta-600 { color: var(--terracotta-600); }
 .text-terracotta-700 { color: var(--terracotta-700); }
 .hover\:text-terracotta-600:hover { color: var(--terracotta-600); }
+.hover\:bg-terracotta-700:hover { background-color: var(--terracotta-700); }
 .hover\:border-terracotta-300:hover { border-color: var(--terracotta-300); }
 
 /* Custom gradients */
